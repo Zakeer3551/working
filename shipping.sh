@@ -75,15 +75,15 @@ mv target/shipping*.jar shipping.jar
 
 VALIDATE $? "renaming jar file"
 
-mysql -h 172.31.4.105 -uroot -pRoboShop@1 <db/shipping.sql
+mysql -h 172.31.4.105 -uroot -pRoboShop@1 <db/master-data.sql
 
 VALIDATE $? "loading shipping data"
 
-mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/app-user.sql
+mysql -h 172.31.4.105 -uroot -pRoboShop@1 <db/app-user.sql
 
 VALIDATE $? "loading shipping data"
 
-mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/schema.sql
+mysql -h 172.31.4.105 -uroot -pRoboShop@1 <db/schema.sql
 
 VALIDATE $? "loading shipping data"
 
