@@ -75,9 +75,6 @@ mv target/shipping*.jar shipping.jar
 
 VALIDATE $? "renaming jar file"
 
-mysql -h 172.31.4.105 -uroboshop -pRoboShop@1 <db/master-data.sql
-
-VALIDATE $? "loading shipping data"
 
 mysql -h 172.31.4.105 -uroboshop -pRoboShop@1 <db/app-user.sql
 
